@@ -11,6 +11,7 @@ import {
   MaterialIcons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 const COLORS = {
   primary: "#1e3a4d",
@@ -43,7 +44,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ color, size }) => (
             <AntDesign name="user" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("userInfo")}
+          onPress={() => router.push("/userinfo")}
           style={styles.drawerItem}
         />
 
@@ -54,7 +55,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ color, size }) => (
             <MaterialIcons name="notifications" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("notifications")}
+          onPress={() => router.push("/notigication")}
           style={styles.drawerItem}
         />
 
@@ -65,7 +66,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ size }) => (
             <MaterialCommunityIcons name="shield-home" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("safeZone")}
+          onPress={() => router.push("/safezone")}
           style={styles.drawerItem}
         />
 
@@ -76,7 +77,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ size }) => (
             <MaterialIcons name="contacts" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("emergencyContacts")}
+          onPress={() => router.push("/emergency")}
           style={styles.drawerItem}
         />
 
@@ -87,7 +88,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ size }) => (
             <MaterialIcons name="people" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("caretakers")}
+          onPress={() => router.push("/caretaker")}
           style={styles.drawerItem}
         />
 
@@ -98,7 +99,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ size }) => (
             <MaterialIcons name="info" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("about")}
+          onPress={() => router.push("/about")}
           style={styles.drawerItem}
         />
 
@@ -109,7 +110,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ size }) => (
             <MaterialIcons name="settings" size={size} color={COLORS.secondary} />
           )}
-          onPress={() => props.navigation.navigate("settings")}
+          onPress={() => router.push("/settings")}
           style={styles.drawerItem}
         />
 
@@ -123,7 +124,7 @@ const CustomDrawerContent = (props: any) => {
           icon={({ size }) => (
             <MaterialIcons name="logout" size={size} color="#ff4d4d" />
           )}
-          onPress={() => props.navigation.navigate("logout")}
+          onPress={() => router.push("/logout")}
           style={styles.drawerItem}
         />
       </View>
