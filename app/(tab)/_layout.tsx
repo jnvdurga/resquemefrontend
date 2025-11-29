@@ -14,6 +14,7 @@ const TabTootLayout = () => {
           fontWeight: 'bold',
         }
       }}
+      
     >
       <Tabs.Screen
         name="index"
